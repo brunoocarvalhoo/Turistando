@@ -17,6 +17,7 @@ sudo apt install redis-server
 ```
 bundle install
 ```
+- Ative a API do Google Translate conforme a [documentação](https://console.cloud.google.com/marketplace/product/google/translate.googleapis.com?_ga=2.81098324.-2336344694.1710890618&_gac=1.83874276.1711609303.Cj0KCQjwqpSwBhClARIsADlZ_TkakP_UY6QRKkNySIw46gctb2bYuV6vi_P-F8XL3UPuMeQKnXKdosQaAjExEALw_wcB&project=api-places-418607)
 
 ## Primeiros passos
 - Configure o seu arquivo `database.yml`
