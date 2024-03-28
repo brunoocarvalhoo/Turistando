@@ -44,14 +44,11 @@ rails server
 ```
 
 ## Requisições e Respostas
-Após instalar e configurar o projeto está na hora de consumir a API.
 
-Você pode fazer o uso de duas maneiras
+- Baixe o arquivo [API Turistando.json](https://github.com/brunoocarvalhoo/Turistando/files/14793842/API.Turistando.json). 
+- Importe o arquivo dentro de um Cliente de API
+- Teste as requisições
 
-- Utilizando algum cliente de API como: Postman ou Talend API
-- Consumindo a API em algum outro projeto
-
-## Utilizando um cliente de API
 Requisição por padrão trás 500 pontos turísticos diferentes em nosso banco de dados.
 
 ```
