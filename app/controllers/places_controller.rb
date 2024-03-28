@@ -45,7 +45,7 @@ class PlacesController < ApplicationController
 
   def specific_kinds
     kind = params[:kind]
-    places = Place.where("kinds LIKE ?", "%#{kind}%").pluck(:name, :kinds)
+    places = Place.where("kinds LIKE ?", "%#{kind}%").pluck(:name, :kinds, :rate, :coordinates)
     places_json = places.to_json
 
     translated_text(places_json)
