@@ -33,10 +33,16 @@ rails db:migrate
 ```
 rake get_data:get_data
 ```
-- Configure as varíaveis de ambiente no arquivo `development.rb`
+- Crie e configure as varíaveis de ambiente no arquivo `.env` conforme abaixo
 ```ruby
+# Configuração do Banco de Dados
+MYSQL_HOST=SEU_HOST
+MYSQL_USER=SEU_MYSQL_USER
+MYSQL_PASSWORD=SEU_MYSQL_PASSWORD
 # Sua chave API do google translate
-ENV['API_KEY'] = "SUA CHAVE API"
+API_KEY= "SUA_CHAVE_API"
+# URL da API do Google Translate
+BASE_URL = "https://translation.googleapis.com/language/translate/v2/"
 ```
 - Inicie o servidor da API:
 ```
