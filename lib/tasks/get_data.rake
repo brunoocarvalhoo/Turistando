@@ -20,7 +20,7 @@ namespace :get_data do
       place.kinds = properties["kinds"]
       place.coordinates = feature["geometry"]["coordinates"]
 
-      place.save! ? msg = 'deu boa' : msg ='deu ruim'
+      place.save! ? msg = 'Ponto Turístico salvo com Sucesso' : msg ='Erro ao salvar Ponto Turístico'
 
       puts msg
     end
