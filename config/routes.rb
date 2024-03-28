@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :places
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :places do
+    collection do
+      get ':kind', to: "places#specific_kinds", constraints: { kind: /[a-zA-Z]+/ }
+      get ':kind/:target', to: "places#specific_kinds", constraints: { kind: /[a-zA-Z]+/, target: /[a-zA-Z]+/ }
+    end
+  end
 end
+
