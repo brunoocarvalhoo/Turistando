@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   before_action :target
-  before_action :set_place, only: %i[ show update destroy ]
+  before_action :set_place, only: %i[ show destroy ]
 
   # GET /places
   def index
@@ -12,26 +12,6 @@ class PlacesController < ApplicationController
   # GET /places/1
   def show
     render json: @place
-  end
-
-  # POST /places
-  def create
-    @place = Place.new(place_params)
-
-    if @place.save
-      render json: @place, status: :created, location: @place
-    else
-      render json: @place.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /places/1
-  def update
-    if @place.update(place_params)
-      render json: @place
-    else
-      render json: @place.errors, status: :unprocessable_entity
-    end
   end
 
   # DELETE /places/1
